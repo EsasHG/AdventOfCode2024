@@ -4,9 +4,8 @@ using System.Text;
 class Day1
 {
 
-    public void puzzle1()
+    public void part1()
     {
-        Console.WriteLine("Hello World 2!");
         string[] input = System.IO.File.ReadAllLines("X:\\Programming\\C#\\AdventOfCode2024\\AdventOfCode2024\\Input\\day1_input.txt");
         List<int> list1 = new List<int>();
         List<int> list2 = new List<int>();
@@ -28,9 +27,8 @@ class Day1
         Console.WriteLine("Final diff: " + diff.ToString());
     }
 
-    public void puzzle2()
+    public void part2()
     {
-        Console.WriteLine("Hello World 2!");
         string[] input = System.IO.File.ReadAllLines("X:\\Programming\\C#\\AdventOfCode2024\\AdventOfCode2024\\Input\\day1_input.txt");
         List<int> list1 = new List<int>();
         List<int> list2 = new List<int>();
