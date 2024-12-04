@@ -1,10 +1,10 @@
 using System;
 using System.Runtime.CompilerServices;
 using System.Text;
-class Day1
+class Day1 : Day
 {
 
-    public void part1()
+    public override void part1()
     {
         string[] input = System.IO.File.ReadAllLines("X:\\Programming\\C#\\AdventOfCode2024\\AdventOfCode2024\\Input\\day1_input.txt");
         List<int> list1 = new List<int>();
@@ -27,7 +27,7 @@ class Day1
         Console.WriteLine("Final diff: " + diff.ToString());
     }
 
-    public void part2()
+    public override void part2()
     {
         string[] input = System.IO.File.ReadAllLines("X:\\Programming\\C#\\AdventOfCode2024\\AdventOfCode2024\\Input\\day1_input.txt");
         List<int> list1 = new List<int>();

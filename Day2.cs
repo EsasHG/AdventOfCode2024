@@ -7,9 +7,9 @@ using System.Net.Security;
 using System.Text;
 using System.Threading.Tasks;
 
-class Day2
+class Day2 : Day
 {
-    public void part1()
+    public override void part1()
     {
         string[] input = System.IO.File.ReadAllLines("X:\\Programming\\C#\\AdventOfCode2024\\AdventOfCode2024\\Input\\day2_input.txt");
 
@@ -29,7 +29,7 @@ class Day2
         Console.WriteLine("Answer part 1: " + safeReports.ToString());
     }
 
-    public void part2()
+    public override void part2()
     {
         string[] input = System.IO.File.ReadAllLines("X:\\Programming\\C#\\AdventOfCode2024\\AdventOfCode2024\\Input\\day2_input.txt");
 
