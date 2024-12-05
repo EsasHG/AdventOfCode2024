@@ -10,9 +10,9 @@ internal class Day4 : Day
 {
     public override void part1()
     {
-        string[] input = System.IO.File.ReadAllLines("X:\\Programming\\C#\\AdventOfCode2024\\AdventOfCode2024\\Input\\day4_input.txt");
 
         base.part1();
+        string[] input = System.IO.File.ReadAllLines("X:\\Programming\\C#\\AdventOfCode2024\\AdventOfCode2024\\Input\\day4_input.txt");
 
 
         int matches = 0;

@@ -4,6 +4,6 @@
 //day.puzzle1();
 //day.puzzle2();
 
-Day day = new Day4();
-//day.part1();
+Day day = new Day5();
+day.part1();
 day.part2();
