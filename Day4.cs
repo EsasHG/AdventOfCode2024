@@ -12,6 +12,9 @@ internal class Day4 : Day
     {
         string[] input = System.IO.File.ReadAllLines("X:\\Programming\\C#\\AdventOfCode2024\\AdventOfCode2024\\Input\\day4_input.txt");
 
+        base.part1();
+
+
         int matches = 0;
 
         //forward
@@ -151,13 +154,52 @@ internal class Day4 : Day
             }
         }
         */
-        base.part1();
     }
 
 
     public override void part2()
     {
         base.part2();
+
+        string[] input = System.IO.File.ReadAllLines("X:\\Programming\\C#\\AdventOfCode2024\\AdventOfCode2024\\Input\\day4_input.txt");
+
+        int matches = 0;
+
+        for (int i = 0; i < input.Length; i++)
+        {
+            for (int j = 0; j < input[i].Length; j++)
+            {
+                if (input[i][j] == 'A')
+                {
+                    if(i > 0  && i < input.Length-1 && j > 0 && j < input[i].Length - 1) // all corners are valid
+                    {
+                        char topLeft = input[i - 1][j - 1];
+                        if (topLeft == 'M' || topLeft == 'S')
+                        {
+                            char botRight = input[i+1][j+1];
+                            if (botRight != topLeft && (botRight == 'M' || botRight == 'S')) // one mas found
+                            {
+                                Console.WriteLine("ONE MAS FOUND!");
+
+                                char topRight = input[i - 1][j + 1];
+                                if (topRight == 'M' || topRight == 'S')
+                                {
+                                    char botLeft = input[i + 1][j - 1];
+                                    if (botLeft != topRight && (botLeft == 'M' || botLeft == 'S')) // x-mas found!!
+                                    {
+                                        Console.WriteLine("X-MAS FOUND!");
+                                        matches++;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        Console.WriteLine("Answer: " + matches.ToString());
+
     }
 }
 
